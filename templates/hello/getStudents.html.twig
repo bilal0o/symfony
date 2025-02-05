@@ -1,0 +1,11 @@
+ {% extends "base.html.twig" %}
+ {% block body %}
+ <h1 class="text-4xl bg-red-800"> this is khan</h1>
+{% for student in students%}
+
+{{ student }}
+
+{%  endfor %}
+<img src="{{ asset('images/HOME.png')}}"  />
+
+ {% endblock body %}

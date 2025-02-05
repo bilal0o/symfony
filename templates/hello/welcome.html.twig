@@ -1,0 +1,8 @@
+ {% extends "base.html.twig" %}
+
+ {% block body %}
+ <h1 class="text-[black] text-blue-300"> elcome to the world of symfony twig mr {{ name }}</h1>
+ <a href="/about">about us</a>
+ <a href="{{path('multiply',{a:2 ,b:3})}}">mutiply 4*5</a>
+
+ {% endblock body %}

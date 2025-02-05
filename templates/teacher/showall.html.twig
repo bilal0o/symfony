@@ -1,0 +1,14 @@
+ {% extends "base.html.twig" %}
+
+ {% block body %}
+   {% for teacher in teachers %}
+
+   {{ teacher.id ~ teacher.ADDRESS }} <br>
+   
+   {% endfor %}
+
+ 
+ 
+ {% endblock body %}
+
+
