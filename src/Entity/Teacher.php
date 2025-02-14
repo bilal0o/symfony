@@ -5,10 +5,12 @@ namespace App\Entity;
 use App\Repository\TeacherRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: TeacherRepository::class)]
 class Teacher
 {
+   
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -16,19 +18,24 @@ class Teacher
 
    
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"the number is not blank")]
     private ?string $Name = null;
 
    
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $FatherName = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $Email = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank]
     private ?string $Address = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank]
     private ?\DateTimeImmutable $DateOfBirth = null;
 
     public function getId(): ?int

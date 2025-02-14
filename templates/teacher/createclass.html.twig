@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="bg-white w-full max-w-2xl mx-auto p-6 rounded-lg shadow-md">
+    <h1 class="text-2xl font-semibold mb-4">This is from the teacher type class</h1>
+
+    {{ form_start(form, { 'attr': {'class': 'space-y-4','novalidate':'novalidate'} }) }}
+    <div>{{form_errors(form)}}</div>
+    
+
+    <div>
+        {{ form_label(form.name, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.name, {'attr': {'class': 'w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'}}) }}
+    </div>
+
+    <div>
+       
+        {{ form_label(form.fatherName, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.fatherName, {'attr': {'class': 'w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'}}) }}
+    </div>
+
+    <div>
+       
+        {{ form_label(form.email, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.email, {'attr': {'class': 'w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'}}) }}
+    </div>
+
+    <div>
+        {{ form_label(form.dateOfBirth, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.dateOfBirth, {'attr': {'class': 'w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'}}) }}
+    </div>
+
+    <div>
+        {{ form_label(form.address, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.address, {'attr': {'class': 'w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'}}) }}
+    </div>
+
+    <div class="mt-4">
+        {{ form_widget(form.submit, {'attr': {'class': 'w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition'}}) }}
+    </div>
+
+    {{ form_end(form) }}
+</div>
+{% endblock body %}

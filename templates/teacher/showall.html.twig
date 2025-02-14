@@ -1,6 +1,9 @@
  {% extends "base.html.twig" %}
 
  {% block body %}
+ {% for message in app.flashes('success') %}
+    {{ message }}
+ {% endfor %}
    {% for teacher in teachers %}
 
    {{ teacher.id ~ teacher.ADDRESS }} <br>
